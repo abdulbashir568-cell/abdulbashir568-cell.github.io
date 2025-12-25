@@ -1,0 +1,282 @@
+/* ===============================
+   GLOBAL RESET
+================================ */
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* جلوگیری از کش آمدن صفحه */
+  font-family: "Poppins", sans-serif;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+  font-family:"Poppins",sans-serif;
+}
+
+img,video{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:10px 20px;
+  background:blue;
+  border-radius:7px;
+}
+
+.nav img{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+}
+
+.nav ul{
+  display:flex;
+  gap:15px;
+  list-style:none;
+}
+
+.nav a{
+  color:#fff;
+  text-decoration:none;
+  font-size:1.1em;
+}
+
+/* ===============================
+   HERO / VIDEO
+================================ */
+.videose{
+  width:100%;
+  height:100vh;
+  object-fit:cover;
+  border-radius:7px;
+}
+
+.text{
+  position:absolute;
+  top:35%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  width:80%;
+  text-align:center;
+}
+
+.text p{
+  max-width:900px;
+  margin:auto;
+  font-size:1.3em;
+}
+
+/* ===============================
+   FLEX SECTIONS
+================================ */
+.photo-aqcha,
+.teacher4,
+.web-info,
+.ai-design,
+.designin1,
+.center-part-business,
+.engineer-local,
+.agreecul-local,
+.last-develop,
+.english-photobar,
+.graphic-last1,
+.ai-computer1{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+}
+
+/* ===============================
+   WIDE PARAGRAPHS
+================================ */
+.last-web p,
+.last-ai p,
+.english-info p,
+#english-pragraph p,
+.graphic-last1 p,
+.last-busune p,
+.engi-more p,
+.more-agriculture1 p{
+  max-width:1100px;
+  margin:20px auto;
+  padding:10px;
+  background:rgba(0,0,0,.6);
+  border-radius:7px;
+  font-size:1.5em;
+}
+
+/* ==================================================
+   📱 MOBILE SMALL (≤460px)  ← مهم
+================================================== */
+@media (max-width:460px){
+
+  .nav{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .nav ul{
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .nav a{
+    font-size:14px;
+  }
+
+  .videose{
+    height:50vh;
+  }
+
+  .text{
+    width:95%;
+    top:40%;
+  }
+
+  .text p{
+    font-size:13px;
+  }
+
+  /* all flex → column */
+  .photo-aqcha,
+  .teacher4,
+  .web-info,
+  .ai-design,
+  .designin1,
+  .center-part-business,
+  .engineer-local,
+  .agreecul-local,
+  .last-develop,
+  .english-photobar,
+  .graphic-last1,
+  .ai-computer1{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  img{
+    max-width:280px;
+  }
+
+  .last-web p,
+  .last-ai p,
+  .english-info p,
+  #english-pragraph p,
+  .graphic-last1 p,
+  .last-busune p,
+  .engi-more p,
+  .more-agriculture1 p{
+    width:90%;
+    font-size:13px;
+  }
+
+  footer{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+}
+
+/* ==================================================
+   📱 MOBILE (461px – 768px)
+================================================== */
+@media (min-width:461px) and (max-width:768px){
+
+  .nav{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .nav ul{
+    flex-direction:column;
+  }
+
+  .videose{
+    height:60vh;
+  }
+
+  .text p{
+    font-size:14px;
+  }
+
+  .photo-aqcha,
+  .teacher4,
+  .web-info,
+  .ai-design,
+  .designin1,
+  .center-part-business,
+  .engineer-local,
+  .agreecul-local,
+  .last-develop,
+  .english-photobar,
+  .graphic-last1,
+  .ai-computer1{
+    flex-direction:column;
+  }
+
+  footer{
+    grid-template-columns:1fr;
+  }
+}
+
+/* ==================================================
+   📲 TABLET (769px – 1024px)
+================================================== */
+@media (min-width:769px) and (max-width:1024px){
+
+  .photo-aqcha,
+  .teacher4,
+  .web-info,
+  .ai-design,
+  .designin1,
+  .center-part-business,
+  .engineer-local,
+  .agreecul-local{
+    flex-wrap:wrap;
+  }
+
+  .text p{
+    font-size:16px;
+    width:80%;
+  }
+
+  footer{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+/* ==================================================
+   💻 LAPTOP (1025px – 1366px)
+================================================== */
+@media (min-width:1025px) and (max-width:1366px){
+    img{
+    max-width:280px;
+  }
+  .text{
+    width:75%;
+  }
+
+  footer{
+    grid-template-columns:repeat(4,1fr);
+  }
+}
+
+/* ==================================================
+   🖥 DESKTOP (≥1367px)
+================================================== */
+@media (min-width:1367px){
+
+  footer{
+    grid-template-columns:repeat(5,1fr);
+  }
+}
